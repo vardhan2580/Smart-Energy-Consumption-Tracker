@@ -1,0 +1,19 @@
+Real-time Monitoring – Continuously tracks electricity usage of appliances and entire households in real-time.
+
+IoT Integration – Uses smart meters, IoT sensors, or smart plugs to collect energy consumption data.
+
+Data Analytics – Analyzes consumption patterns to identify peak usage hours and wastage points.
+
+Mobile & Web Apps – Provides users with easy-to-read dashboards via mobile or web applications.
+
+Alerts & Notifications – Sends warnings for unusual consumption, overloading, or if energy crosses preset limits.
+
+Cost Estimation – Calculates electricity bills based on usage, helping users forecast expenses.
+
+Energy Optimization – Suggests ways to reduce power wastage (e.g., switching off idle appliances).
+
+Renewable Energy Integration – Can be linked with solar panels or other renewable sources for balanced energy management.
+
+User Customization – Allows setting daily/weekly/monthly usage goals to encourage energy saving habits.
+
+Environmental Impact – Promotes sustainability by reducing carbon footprint through efficient energy consumption.
