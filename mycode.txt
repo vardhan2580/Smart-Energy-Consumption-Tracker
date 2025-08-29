@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import random
 from datetime import datetime, timedelta
 
-# ------------------------
+
 # Step 1: Simulate Data
 # ------------------------
 appliances = ["Fan", "AC", "Fridge", "Lights", "TV"]
@@ -49,4 +49,5 @@ plt.show()
 last_day = df.iloc[-1][appliances]
 plt.pie(last_day, labels=appliances, autopct='%1.1f%%', startangle=90)
 plt.title(f"Energy Distribution on {df.iloc[-1]['Date']}")
+
 plt.show()my.tx
