@@ -1,0 +1,52 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import random
+from datetime import datetime, timedelta
+
+# ------------------------
+# Step 1: Simulate Data
+# ------------------------
+appliances = ["Fan", "AC", "Fridge", "Lights", "TV"]
+days = 7  # one week data
+
+data = []
+
+for day in range(days):
+    date = datetime.today() - timedelta(days=(days - day))
+    usage = {app: random.randint(1, 10) for app in appliances}  # kWh consumption
+    usage["Date"] = date.date()
+    data.append(usage)
+
+df = pd.DataFrame(data)
+
+# ------------------------
+# Step 2: Save & Display Data
+# ------------------------
+print("Energy Consumption Data (kWh):\n")
+print(df)
+
+# ------------------------
+# Step 3: Plot Charts
+# ------------------------
+
+# Daily total consumption
+df["Total"] = df[appliances].sum(axis=1)
+plt.figure(figsize=(8, 5))
+plt.plot(df["Date"], df["Total"], marker="o", label="Total Consumption")
+plt.xlabel("Date")
+plt.ylabel("Energy (kWh)")
+plt.title("Daily Energy Consumption")
+plt.legend()
+plt.show()
+
+# Appliance-wise consumption (bar chart)
+df.set_index("Date")[appliances].plot(kind="bar", stacked=True, figsize=(10, 6))
+plt.ylabel("Energy (kWh)")
+plt.title("Appliance-wise Energy Consumption")
+plt.show()
+
+# Pie chart (last day usage)
+last_day = df.iloc[-1][appliances]
+plt.pie(last_day, labels=appliances, autopct='%1.1f%%', startangle=90)
+plt.title(f"Energy Distribution on {df.iloc[-1]['Date']}")
+plt.show()my.tx
